@@ -1,4 +1,7 @@
 # MusicPro
-Super admin user
+Super admin users
 username: MusicPro
 pass:MusicPro
+
+username: admin
+pass:1234
