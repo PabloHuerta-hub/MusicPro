@@ -1,7 +1,17 @@
 # MusicPro
-Super admin users
-username: MusicPro
-pass:MusicPro
+Super admin users:
+=
+- Username: MusicPro
+Pass:MusicPro
 
-username: admin
-pass:1234
+- Username: admin
+Pass:1234
+
+URLS: 
+=
+- Api:'api/'
+- Index:' '
+- contacto:'contactanos'
+- Blog:'blog'
+- Productos:'productos'
+- About:'sobrenuestrosproductos'
