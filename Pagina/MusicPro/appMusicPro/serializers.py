@@ -37,8 +37,6 @@ class SubCategoriaSerializer(serializers.HyperlinkedModelSerializer) :
         fields = ['nombre', 'categoria', 'categoriaId']
 
 class ProductoSerializer(serializers.HyperlinkedModelSerializer) :
-    sub_categoria = SubCategoriaSerializer(read_only=True)
-    sub_categoriaId = serializers.PrimaryKeyRelatedField(write_only=True, queryset=SubCategoria.objects.all(), source='sub_categoria')
     class Meta:
         model = Producto
-        fields = ['nombre', 'codigo', 'precio', 'serie_producto', 'marca', 'sub_categoria', 'sub_categoriaId']
+        fields = ['nombre', 'codigo', 'precio', 'serie_producto', 'marca']

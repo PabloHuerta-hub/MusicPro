@@ -87,101 +87,24 @@
         </h2>
       </div>
       <div class="product_container">
+        {% for product in producto %}
         <div class="box">
-          <div class="img-box">
+          <!-- <div class="img-box">
             <img src="{% static 'images/GuitarraElectrica.jpg'%}" alt="">
-          </div>
+          </div> -->
           <div class="detail-box">
             <h5>
-              GUITARRA ELECTRICA TAGIMA TG-530 METALLIC RED
+              {{ product.nombre }}
             </h5>
             <h4>
-              <span>$</span>306.990
+              <span>$</span>{{ product.precio }}
             </h4>
             <a href="">
               Comprar ahora.
             </a>
           </div>
         </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/Bateria.jpg'%}" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              BATERIA DB STAGESTAR 5 PZAS. SG50H4C TAMA
-            </h5>
-            <h4>
-              <span>$</span>798.900
-            </h4>
-            <a href="">
-              Comprar ahora.
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/BajoElectrico.jpg'%}" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Tagima TW-73 Black L/MG Bajo Eléctrico
-            </h5>
-            <h4>
-              <span>$</span>349.900
-            </h4>
-            <a href="">
-              Comprar ahora.
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/174790-800-auto.jpg'%}" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Piano de cola Young Chang Y150 color Black Polish
-            </h5>
-            <h4>
-              <span>$</span>7.799.900
-            </h4>
-            <a href="">
-              Comprar ahora.
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/AmpliMarshall.jpg'%}" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              AMPLIFICADOR DE GUITARRA MARSHALL MG30FX
-            </h5>
-            <h4>
-              <span>$</span>279.900
-            </h4>
-            <a href="">
-              Comprar ahora.
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/Microfono.jpg'%}" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Shure 55SH Series II Unidyne Micrófono Dinámico
-            </h5>
-            <h4>
-              <span>$</span>199.900
-            </h4>
-            <a href="">
-              Comprar ahora.
-            </a>
-          </div>
+        {% endfor %}
         </div>
       </div>
       <div class="btn-box">
