@@ -15,3 +15,7 @@ URLS:
 - Blog:'blog'
 - Productos:'productos'
 - About:'sobrenuestrosproductos'
+
+Soluciones:
+=
+- en caso de problemas con la base de datos ejecutar: python manage.py migrate --run-syncdb
