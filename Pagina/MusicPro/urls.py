@@ -21,9 +21,6 @@ from MusicPro.appMusicPro import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'tipos_instrumentos', views.TipoInstrumentoViewSet)
-router.register(r'categorias', views.CategoriaViewSet)
-router.register(r'sub_categorias', views.SubCategoriaViewSet)
 router.register(r'productos', views.ProductoViewSet)
 
 urlpatterns = [

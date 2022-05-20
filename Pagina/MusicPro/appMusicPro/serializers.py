@@ -3,7 +3,7 @@
 # para cada modelo.
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from tienda.models import Tipo_Instrumento, Categoria, Producto, SubCategoria
+from tienda.models import Producto
         
 class UserSerializer(serializers.HyperlinkedModelSerializer) :
     class Meta:
@@ -15,28 +15,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer) :
         model = Group
         fields = ['url', 'name']
 
-
-class TipoInstrumentoSerializer(serializers.HyperlinkedModelSerializer) :
-
-    class Meta:
-        model = Tipo_Instrumento
-        fields = ['nombre']
-
-class CategoriaSerializer(serializers.HyperlinkedModelSerializer) :
-    tipo_instrumento = TipoInstrumentoSerializer(read_only=True)
-    tipo_instrumentoId = serializers.PrimaryKeyRelatedField(write_only=True, queryset=Tipo_Instrumento.objects.all(), source='tipo_instrumento')
-    class Meta:
-        model = Categoria
-        fields = ['nombre', 'tipo_instrumento', 'tipo_instrumentoId']
-
-class SubCategoriaSerializer(serializers.HyperlinkedModelSerializer) :
-    categoria = CategoriaSerializer(read_only=True)
-    categoriaId = serializers.PrimaryKeyRelatedField(write_only=True, queryset=Categoria.objects.all(), source='categoria')
-    class Meta:
-        model = SubCategoria
-        fields = ['nombre', 'categoria', 'categoriaId']
-
 class ProductoSerializer(serializers.HyperlinkedModelSerializer) :
     class Meta:
         model = Producto
-        fields = ['nombre', 'codigo', 'precio', 'serie_producto', 'marca']
+        fields = ['nombre', 'codigo', 'precio', 'serie_producto', 'marca', 'imagen','categoria']
