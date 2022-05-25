@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>MusicPro</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css'%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css'%}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{% url 'Index'%}">
+            <span style="color:whitesmoke">
+              MusicPro
+            </span>
+          </a>
+          <div class="" id="">
+            <div class="User_option">
+              <form class="form-inline my-2  mb-3 mb-lg-0">
+                <input type="search" placeholder="Buscar">
+                <button class="btn   my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+              <a href="{% url 'carrito'%}">
+                <img src="{% static 'img/bag.png'%}" alt="">
+              </a>
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="{% url 'Index'%}">Inicio</a>
+                <a href="{% url 'Product'%}">Productos</a>
+                <a href="{% url 'Blog'%}">Novedades</a>
+                <a href="{% url 'Contactanos'%}">Contáctanos</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section">
+      <div class="side-img">
+        <img src="{% static 'img/side-img.png'%}" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="detail-box">
+              <h2>
+                MUSIC
+              </h2>
+              <h1>
+                P<span>R</span>O
+              </h1>
+              <a href="">
+                Leer más
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="img-box">
+                    <img src="{% static 'img/slide1.jpg'%}" alt="" width="700px" height="300px">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="img-box">
+                    <img src="{% static 'img/slide2.png'%}" alt="" width="700px" height="300px">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="img-box">
+                    <img src="{% static 'img/slide3.jpg'%}" alt="" width="700px" height="300px">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel_btn-container" style="justify-content: center">
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+</body>
+<!-- end product section -->
+
+<!-- footer section -->
+<footer class="container-fluid footer_section ">
+  <div class="container">
+    <p>
+      &copy; <span id="displayYear"></span> All Rights Reserved. Design by
+      <a>Hidalgo, Huerta, Orellana and Rojas</a>
+    </p>
+  </div>
+</footer>
+<!-- end  footer section -->
+
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js'%}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
+
+
+</html>

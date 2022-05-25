@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>MusicPro</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css'%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css'%}" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{% url 'Index'%}">
+            <span>
+              MusicPro
+            </span>
+          </a>
+          <div class="" id="">
+            <div class="User_option">
+              <form class="form-inline my-2  mb-3 mb-lg-0">
+                <input type="search" placeholder="Buscar">
+                <button class="btn   my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+              <a href="{% url 'carrito'%}">
+                <img src="{% static 'img/bag.png'%}" alt="">
+              </a>
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="{% url 'Index'%}">Inicio</a>
+                <a href="{% url 'Product'%}">Productos</a>
+                <a href="{% url 'Blog'%}">Novedades</a>
+                <a href="{% url 'Contactanos'%}">Contáctanos</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- product section -->
+
+  <section class="product_section layout_padding">
+    <div class="container">
+      <div class="heading_container" style="justify-content: center">
+        <h2>
+          Nuestros productos
+        </h2>
+      </div>
+      <div class="product_container">
+        {% for productos in productos %}
+        <div class="box">
+          <div class="img-box">
+            <img src="{{productos.imagen}}" alt="">
+          </div> 
+          <div class="detail-box">
+            <h5>
+              {{ productos.nombre }}
+            </h5>
+            <h4>
+              <span>$</span>{{ productos.precio }}
+            </h4>
+            <a href="{% url 'Add' productos.id %}">
+              Añadir al carrito
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+  <!-- end product section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved. Design by
+        <a>Hidalgo, Huerta, Orellana and Rojas</a>
+      </p>
+    </div>
+  </footer>
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js'%}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
+
+
+
+</html>
