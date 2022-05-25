@@ -40,12 +40,9 @@
           </a>
           <div class="" id="">
             <div class="User_option">
-              <form class="form-inline my-2  mb-3 mb-lg-0">
-                <input type="search" placeholder="Buscar">
-                <button class="btn   my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
               <a href="{% url 'carrito'%}">
-                <img src="{% static 'img/bag.png'%}" alt="">
+                <img style="width: 40px" src="{% static 'img/bag.png'%}" alt="">
+                <h5 style="color:black; padding: 5px;"> {{cantidad_carrito}} </h5>
               </a>
             </div>
 

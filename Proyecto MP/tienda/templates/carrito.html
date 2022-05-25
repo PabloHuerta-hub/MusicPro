@@ -36,17 +36,7 @@
                 MusicPro
               </span>
             </a>
-            <div class="" id="">
-              <div class="User_option">
-                <form class="form-inline my-2  mb-3 mb-lg-0">
-                  <input type="search" placeholder="Buscar">
-                  <button class="btn   my-sm-0 nav_search-btn" type="submit"></button>
-                </form>
-                <a href="{% url 'carrito'%}">
-                  <img src="{% static 'img/bag.png'%}" alt="">
-                </a>
-              </div>
-  
+            <div class="" id="">  
               <div class="custom_menu-btn">
                 <button onclick="openNav()">
                   <span class="s-1">
@@ -76,13 +66,13 @@
     </div>
     <section class="contact_section layout_padding">
       <div class="container ">
-          <table class="table table-dark">
+          <table class="table table-dark" style="background-color: black;">
             <thead>
               <tr>
-                <th scope="row" colspan="3" class="text-center">CARRITO </th>
+                <th scope="row" colspan="3" class="text-center">CARRITO DE COMPRAS</th>
               </tr>
               <tr>
-                <th scope="col">NOMBRE</th>
+                <th scope="col">NOMBRE PRODUCTO</th>
                 <th scope="col">CANTIDAD</th>
                 <th scope="col">PRECIO</th>
               </tr>
@@ -93,7 +83,7 @@
             <tr>
               <td>{{value.nombre}}</td>
               <td>{{value.cantidad}}
-                <a href="{% url 'Sum' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>
+                <a href="{% url 'Sum' value.producto_id %}" class="badge btn btn-dark badge-dark1">+</a>
                 <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
               </td>
               <td>$ {{value.acumulado}}
@@ -105,7 +95,7 @@
             {% else %}
             <tr>
             <td colspan="3">
-            <div class="alert alert-dark text-center"> Sin Productos </div>
+            <div class="alert alert-dark text-center" style="color: black; background-color: white;"> Sin Productos </div>
             </td>
             </tr>
             {% endif %}
@@ -116,7 +106,7 @@
             </tr>
             <tr>
               <th scope="row"></th>
-              <th scope="row">Dolares:</th>
+              <th scope="row">Dólares:</th>
               <td colspan="2">$ {{total_carrito_dolar}}</td>
               </tr>
             </tbody>
@@ -124,8 +114,8 @@
         <hr>
       </div>
     <div class="row text-center">
-    <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger">Limpiar</a></div>
-    <div class="col-6"><a href="#" class="btn btn-dark">Guardar</a></div>
+    <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger" style="background-color: #900101;">Limpiar</a></div>
+    <div class="col-6"><a href="#" class="btn btn-dark" style="background-color: black;">Comprar</a></div>
 
 </div>
 </div>

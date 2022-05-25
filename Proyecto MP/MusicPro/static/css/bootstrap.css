@@ -1775,7 +1775,7 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #343a40;
+  background-color: black;
 }
 
 .table-dark th,
@@ -5072,7 +5072,13 @@ a.badge-light:focus, a.badge-light.focus {
 
 .badge-dark {
   color: #fff;
-  background-color: #343a40;
+  background-color: #737a81;
+}
+
+.badge-dark1 {
+  margin-left: 10px;
+  color: #fff;
+  background-color: #737a81;
 }
 
 a.badge-dark:hover, a.badge-dark:focus {
