@@ -32,9 +32,9 @@
     <!-------------------------------------------- HTML para algun rol del vendedor se puede cambiar como quieran------------------------------------------>
     {% include "Baseheader.html" %}
 
-    <section class="product_section layout_padding">
+    <section class="product_section layout_padding" style="margin-bottom: 400px;">
       <div class="container">
-        <div class="heading_container" style="justify-content: center; margin-bottom: 30px">
+        <div class="heading_container" style="justify-content: center; margin-bottom: 40px">
           <h2>
             Productos
           </h2>
@@ -49,6 +49,7 @@
                   <th scope="col">Categoría</th>
                   <th scope="col">Nro. serie</th>
                   <th scope="col">Precio</th>  
+                  <th scope="col">Stock</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,6 +61,7 @@
                       <td>{{ productos.categoria }}</td>
                       <td>{{ productos.serie_producto }}</td>
                       <td>${{ productos.precio }}</td>
+                      <td>{{ productos.stock }}</td>
                     </tr>
                 {%endfor%}
             </tbody>
@@ -68,73 +70,15 @@
       </div>
     </section>
 
-  <!-- info section -->
-
-  <section class="info_section layout_padding">
-    <div class="container">
-      <div class="info_social-container">
-        <h5>
-          Síguenos
-        </h5>
-        <div class="info_social">
-          <div>
-            <a href="">
-              <img src="{% static 'images/facebook-logo-button.png'%}" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="{% static 'images/twitter-logo-button.png'%}" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="{% static 'images/linkedin.png'%}" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="{% static 'images/instagram.png'%}" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-md-2 offset-lg-1">
-          <h6>
-            Menu
-          </h6>
-          <ul>
-            <li class=" active">
-              <a class="" href="{% url 'Index' %}">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="">
-              <a class="" href="{% url 'Product'%}">Productos </a>
-            </li>
-            <li class="">
-              <a class="" href="{% url 'Blog'%}">ordenes </a>
-            </li>
-          </ul>
-        </div>
-        
-
-  </section>
-
-  <!-- end info section -->
-
-
   <!-- footer section -->
-  <section class="container-fluid footer_section ">
+  <footer class="container-fluid footer_section ">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved. Design by
-        <a href="https://html.design/">Free Html Templates</a>
+        <a>Hidalgo, Huerta, Orellana and Rojas</a>
       </p>
     </div>
-  </section>
+  </footer>
   <!-- end  footer section -->
 
 

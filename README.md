@@ -26,6 +26,12 @@ Paypal:
 - Correo: ClienteJhonDoe@personal.example.com
 - Contraseña: pelicanoprueba123
 
+Tarjeta de Crédito o Débito
+=
+- Número de tarjeta: 4032032082597631
+- Fecha de Expiración: 11/2026
+- CVV: 885
+
 POSIBLES PROBLEMAS:
 =
 - En caso de problemas con la base de datos ejecutar: python manage.py migrate --run-syncdb

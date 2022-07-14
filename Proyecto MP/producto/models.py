@@ -17,6 +17,7 @@ class Producto(models.Model) :
     precio = models.IntegerField(null=False, blank=True)
     imagen = models.ImageField(upload_to='img', null=True)
     categoria = models.IntegerField(choices=categoria,null=True)
+    stock = models.IntegerField(null=True)
     def __str__(self) :
         return f'{self.nombre} -> {self.precio}'
 
